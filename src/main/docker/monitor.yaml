@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   endpoints:
-    - interval: 30s
+    - interval: 5s
       # Prometheus Exporter 对应的 Path 的值
       path: /actuator/prometheus
       # service.yaml 中 Prometheus Exporter 对应的 Port 的 Name 字段的值
