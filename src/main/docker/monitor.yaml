@@ -15,4 +15,4 @@ spec:
   selector:
     matchLabels:
       # service.yaml 的 Label 字段的值以定位目标 service.yaml
-      app: test-docker-service
+      app: test-docker-exporter
