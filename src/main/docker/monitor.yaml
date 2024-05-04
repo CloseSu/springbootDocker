@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: test-docker-exporter
-  # namespace: default
+  namespace: default
 spec:
   endpoints:
     - interval: 30s
@@ -15,4 +15,4 @@ spec:
   selector:
     matchLabels:
       # service.yaml 的 Label 字段的值以定位目标 service.yaml
-      app: test-docker-exporter
+      app: test-docker-service
