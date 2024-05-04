@@ -7,7 +7,7 @@ spec:
   endpoints:
     - interval: 30s
       # Prometheus Exporter 对应的 Path 的值
-      path: /basic/actuator/prometheus
+      path: /actuator/prometheus
       # service.yaml 中 Prometheus Exporter 对应的 Port 的 Name 字段的值
       port: test-docker-service
   namespaceSelector:
