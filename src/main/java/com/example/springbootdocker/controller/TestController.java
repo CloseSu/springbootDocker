@@ -11,4 +11,9 @@ public class TestController {
     public String getTestMsg() {
         return "test spring boot success";
     }
+    @GetMapping("/slow")
+    public String slow() throws InterruptedException {
+        Thread.sleep(50000);
+        return "test spring boot success";
+    }
 }

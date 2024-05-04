@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-docker
+  labels:
+    app: test-docker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-docker
+  template:
+    metadata:
+      labels:
+        app: test-docker
+    spec:
+      containers:
+        - name: test-docker
+          image: core.harbor.domain/library/test-docker:0.0.4
