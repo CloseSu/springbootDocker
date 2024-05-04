@@ -13,7 +13,7 @@ public class TestController {
     }
     @GetMapping("/slow")
     public String slow() throws InterruptedException {
-        Thread.sleep(50000);
+        Thread.sleep(5000);
         return "test spring boot success";
     }
 }
