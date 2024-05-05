@@ -1,4 +1,4 @@
-CREATE TABLE `staffInfo`
+CREATE TABLE `staff_info`
 (
     `ID`          int(11) NOT NULL AUTO_INCREMENT,
     `EMAIL`       varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
