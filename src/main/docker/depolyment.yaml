@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: test-docker
-          image: core.harbor.domain/library/test-docker:0.0.15
+          image: core.harbor.domain/library/test-docker:0.0.26
