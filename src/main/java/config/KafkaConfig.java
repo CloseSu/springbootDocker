@@ -40,7 +40,7 @@ public class KafkaConfig {
         props.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SASL_PLAINTEXT");
         props.put(SaslConfigs.SASL_MECHANISM, "PLAIN");
         props.put(SaslConfigs.SASL_JAAS_CONFIG, String.format(
-                "%s required username=\"%s\" " + "password=\"%s\";", PlainLoginModule.class.getName(), "username", "password"
+                "%s required username=\"%s\" " + "password=\"%s\";", PlainLoginModule.class.getName(), "user1", ""
         ));
 
         return new DefaultKafkaProducerFactory<>(props);
@@ -53,7 +53,7 @@ public class KafkaConfig {
         props.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SASL_PLAINTEXT");
         props.put(SaslConfigs.SASL_MECHANISM, "PLAIN");
         props.put(SaslConfigs.SASL_JAAS_CONFIG, String.format(
-                "%s required username=\"%s\" " + "password=\"%s\";", PlainLoginModule.class.getName(), "username", "password"
+                "%s required username=\"%s\" " + "password=\"%s\";", PlainLoginModule.class.getName(), "user1", ""
         ));
 
         return new DefaultKafkaConsumerFactory<>(props);
