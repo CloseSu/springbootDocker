@@ -32,31 +32,4 @@ public class KafkaConfig {
     public NewTopic myTopic() {
         return new NewTopic(myTopic, 2, (short) 1);
     }
-
-    @Bean
-    public ProducerFactory<Object, Object> producerFactory() {
-        Map<String, Object> props = new HashMap<>();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka.storage:9092");
-        props.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SASL_PLAINTEXT");
-        props.put(SaslConfigs.SASL_MECHANISM, "PLAIN");
-        props.put(SaslConfigs.SASL_JAAS_CONFIG, String.format(
-                "%s required username=\"%s\" " + "password=\"%s\";", PlainLoginModule.class.getName(), "user1", ""
-        ));
-
-        return new DefaultKafkaProducerFactory<>(props);
-    }
-
-    @Bean
-    public ConsumerFactory<Object, Object> consumerFactory() {
-        Map<String, Object> props = new HashMap<>();
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka.storage:9092");
-        props.put(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, "SASL_PLAINTEXT");
-        props.put(SaslConfigs.SASL_MECHANISM, "PLAIN");
-        props.put(SaslConfigs.SASL_JAAS_CONFIG, String.format(
-                "%s required username=\"%s\" " + "password=\"%s\";", PlainLoginModule.class.getName(), "user1", ""
-        ));
-
-        return new DefaultKafkaConsumerFactory<>(props);
-    }
-
 }
