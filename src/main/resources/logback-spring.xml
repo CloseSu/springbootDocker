@@ -34,6 +34,7 @@
     </appender>
 
     <root level="INFO">
+        <appender-ref ref="GELF" />
         <appender-ref ref="STDOUT" />
     </root>
 
