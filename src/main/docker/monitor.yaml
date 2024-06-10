@@ -6,13 +6,10 @@ metadata:
 spec:
   endpoints:
     - interval: 5s
-      # Prometheus Exporter 对应的 Path 的值
       path: /actuator/prometheus
-      # service.yaml 中 Prometheus Exporter 对应的 Port 的 Name 字段的值
       port: test-docker-service
   namespaceSelector:
     any: true
   selector:
     matchLabels:
-      # service.yaml 的 Label 字段的值以定位目标 service.yaml
       app: test-docker-service
